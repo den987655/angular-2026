@@ -1,0 +1,581 @@
+{
+  "version": "6.0",
+  "nxVersion": "22.5.1",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {
+      "web-e2e": [
+        {
+          "file": "app-monorepo/apps/web-e2e/eslint.config.mjs",
+          "hash": "1172734138943286526"
+        },
+        {
+          "file": "app-monorepo/apps/web-e2e/playwright.config.ts",
+          "hash": "11516038565449462743"
+        },
+        {
+          "file": "app-monorepo/apps/web-e2e/project.json",
+          "hash": "11356601415588047577"
+        },
+        {
+          "file": "app-monorepo/apps/web-e2e/src/example.spec.ts",
+          "hash": "16019101014373124625"
+        },
+        {
+          "file": "app-monorepo/apps/web-e2e/tsconfig.json",
+          "hash": "15726545290547512047"
+        }
+      ],
+      "orders-web-data-access": [
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/README.md",
+          "hash": "4259501723418983435"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/eslint.config.mjs",
+          "hash": "11344850236334223571"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/project.json",
+          "hash": "6148289087101763004"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/src/index.ts",
+          "hash": "8484531626155605304"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/src/lib/orders-web-data-access/orders-web-data-access.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/src/lib/orders-web-data-access/orders-web-data-access.html",
+          "hash": "9831923332263588744"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/src/lib/orders-web-data-access/orders-web-data-access.ts",
+          "hash": "4879425258651347074"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/tsconfig.json",
+          "hash": "7471663390492411124"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/data-access/tsconfig.lib.json",
+          "hash": "14882717054991120248"
+        }
+      ],
+      "domain": [
+        {
+          "file": "app-monorepo/libs/orders/domain/README.md",
+          "hash": "8278362876892346401"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/eslint.config.mjs",
+          "hash": "10511035923162149759"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/jest.config.ts",
+          "hash": "5870402486621111724"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/package.json",
+          "hash": "11309755862320182798"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/project.json",
+          "hash": "9476298467545591888"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/src/index.ts",
+          "hash": "9492584744129690893"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/src/lib/domain.spec.ts",
+          "hash": "11133543729227495926"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/src/lib/domain.ts",
+          "hash": "17099715523987487301"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/tsconfig.json",
+          "hash": "9505886339790543345"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/tsconfig.lib.json",
+          "hash": "12703045691091751756"
+        },
+        {
+          "file": "app-monorepo/libs/orders/domain/tsconfig.spec.json",
+          "hash": "8313901627687878027"
+        }
+      ],
+      "orders-shared-data-access": [
+        {
+          "file": "app-monorepo/libs/orders/shared/data-access/project.json",
+          "hash": "13878774668792913707"
+        },
+        {
+          "file": "app-monorepo/libs/orders/shared/data-access/src/index.ts",
+          "hash": "4595979742548113990"
+        },
+        {
+          "file": "app-monorepo/libs/orders/shared/data-access/tsconfig.json",
+          "hash": "3231417149070305186"
+        },
+        {
+          "file": "app-monorepo/libs/orders/shared/data-access/tsconfig.lib.json",
+          "hash": "2503771511583204286"
+        }
+      ],
+      "orders-ui": [
+        {
+          "file": "app-monorepo/libs/orders/web/ui/README.md",
+          "hash": "12286930698004855863"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/eslint.config.mjs",
+          "hash": "11344850236334223571"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/project.json",
+          "hash": "3534314539372919942"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/src/index.ts",
+          "hash": "4272208496625296448"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/src/lib/orders-ui/orders-ui.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/src/lib/orders-ui/orders-ui.html",
+          "hash": "16558810179376808667"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/src/lib/orders-ui/orders-ui.ts",
+          "hash": "9106054491000588968"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/tsconfig.json",
+          "hash": "7471663390492411124"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/ui/tsconfig.lib.json",
+          "hash": "13987193153224556044"
+        }
+      ],
+      "orders-feature": [
+        {
+          "file": "app-monorepo/libs/orders/web/feature/README.md",
+          "hash": "790068892659043400"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/eslint.config.mjs",
+          "hash": "11344850236334223571"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/project.json",
+          "hash": "10360624272460290493"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/src/index.ts",
+          "hash": "9594682484625514773"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/src/lib/lib.routes.ts",
+          "hash": "16371140132556173106"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/src/lib/orders-feature/orders-feature.css",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/src/lib/orders-feature/orders-feature.html",
+          "hash": "4685560658036688905"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/src/lib/orders-feature/orders-feature.ts",
+          "hash": "9608699725753939848"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/tsconfig.json",
+          "hash": "7471663390492411124"
+        },
+        {
+          "file": "app-monorepo/libs/orders/web/feature/tsconfig.lib.json",
+          "hash": "14882717054991120248"
+        }
+      ],
+      "web": [
+        {
+          "file": "app-monorepo/apps/web/eslint.config.mjs",
+          "hash": "16756400681144203361"
+        },
+        {
+          "file": "app-monorepo/apps/web/jest.config.ts",
+          "hash": "17136010859576748781"
+        },
+        {
+          "file": "app-monorepo/apps/web/project.json",
+          "hash": "13928998606503372753"
+        },
+        {
+          "file": "app-monorepo/apps/web/public/favicon.ico",
+          "hash": "9303420814833116677"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.config.ts",
+          "hash": "4515289115773032281"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.html",
+          "hash": "11987652264972370457"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.routes.ts",
+          "hash": "12819952688971260560"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.scss",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.spec.ts",
+          "hash": "13301273489476411121"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/app.ts",
+          "hash": "15523473137349614732"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/app/nx-welcome.ts",
+          "hash": "2300433542910067699"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/index.html",
+          "hash": "16867689278614360082"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/main.ts",
+          "hash": "3314327030169821486"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/styles.scss",
+          "hash": "5195668842064076916"
+        },
+        {
+          "file": "app-monorepo/apps/web/src/test-setup.ts",
+          "hash": "1917999429567095215"
+        },
+        {
+          "file": "app-monorepo/apps/web/tsconfig.app.json",
+          "hash": "2439034995472904132"
+        },
+        {
+          "file": "app-monorepo/apps/web/tsconfig.json",
+          "hash": "4663124578817442910"
+        },
+        {
+          "file": "app-monorepo/apps/web/tsconfig.spec.json",
+          "hash": "5331518322626158299"
+        }
+      ],
+      "orders-data-access": [
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/README.md",
+          "hash": "17560672182878190679"
+        },
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/project.json",
+          "hash": "18182501147307822983"
+        },
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/src/index.ts",
+          "hash": "11105253733691525091"
+        },
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/src/lib/orders-data-access.module.ts",
+          "hash": "13644898496594709876"
+        },
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/tsconfig.json",
+          "hash": "5570827049353035218"
+        },
+        {
+          "file": "app-monorepo/libs/orders/api/data-access/tsconfig.lib.json",
+          "hash": "10698017584812971711"
+        }
+      ],
+      "api-e2e": [
+        {
+          "file": "app-monorepo/apps/api-e2e/eslint.config.mjs",
+          "hash": "2624537849564014525"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/jest.config.ts",
+          "hash": "16237957319090451515"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/project.json",
+          "hash": "8563119963047322613"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/src/api/api.spec.ts",
+          "hash": "110394728024017389"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/src/support/global-setup.ts",
+          "hash": "10817858795115919263"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/src/support/global-teardown.ts",
+          "hash": "14210317125869451873"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/src/support/test-setup.ts",
+          "hash": "15521797170623961900"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/tsconfig.json",
+          "hash": "15443990093475294480"
+        },
+        {
+          "file": "app-monorepo/apps/api-e2e/tsconfig.spec.json",
+          "hash": "14954872453723519891"
+        }
+      ],
+      "api": [
+        {
+          "file": "app-monorepo/apps/api/eslint.config.mjs",
+          "hash": "2624537849564014525"
+        },
+        {
+          "file": "app-monorepo/apps/api/jest.config.ts",
+          "hash": "11236996806909307999"
+        },
+        {
+          "file": "app-monorepo/apps/api/project.json",
+          "hash": "2348631619257854616"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/app/app.controller.spec.ts",
+          "hash": "7647647754668916054"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/app/app.controller.ts",
+          "hash": "15276891910009544695"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/app/app.module.ts",
+          "hash": "11673476679848632172"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/app/app.service.spec.ts",
+          "hash": "13111976464657524091"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/app/app.service.ts",
+          "hash": "9967902337593410053"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/assets/.gitkeep",
+          "hash": "3244421341483603138"
+        },
+        {
+          "file": "app-monorepo/apps/api/src/main.ts",
+          "hash": "150780270862474464"
+        },
+        {
+          "file": "app-monorepo/apps/api/tsconfig.app.json",
+          "hash": "9998040272664329991"
+        },
+        {
+          "file": "app-monorepo/apps/api/tsconfig.json",
+          "hash": "3490524966360018312"
+        },
+        {
+          "file": "app-monorepo/apps/api/tsconfig.spec.json",
+          "hash": "11011431583980985399"
+        },
+        {
+          "file": "app-monorepo/apps/api/webpack.config.js",
+          "hash": "16241762530454801359"
+        }
+      ]
+    },
+    "nonProjectFiles": [
+      {
+        "file": ".idea/.gitignore",
+        "hash": "17491697761739316110"
+      },
+      {
+        "file": ".idea/angular-2026.iml",
+        "hash": "5699621005488057708"
+      },
+      {
+        "file": ".idea/inspectionProfiles/Project_Default.xml",
+        "hash": "8912173605315939135"
+      },
+      {
+        "file": ".idea/modules.xml",
+        "hash": "9418242249957472058"
+      },
+      {
+        "file": ".idea/prettier.xml",
+        "hash": "4097425206230035273"
+      },
+      {
+        "file": "app-monorepo/.editorconfig",
+        "hash": "5443105041930014821"
+      },
+      {
+        "file": "app-monorepo/.github/workflows/ci.yml",
+        "hash": "15818543080246007282"
+      },
+      {
+        "file": "app-monorepo/.gitignore",
+        "hash": "17559216753634855455"
+      },
+      {
+        "file": "app-monorepo/.prettierignore",
+        "hash": "5407418692668764289"
+      },
+      {
+        "file": "app-monorepo/.prettierrc",
+        "hash": "16267754514737964994"
+      },
+      {
+        "file": "app-monorepo/.vscode/extensions.json",
+        "hash": "108759356477840841"
+      },
+      {
+        "file": "app-monorepo/.vscode/launch.json",
+        "hash": "11911801181309274062"
+      },
+      {
+        "file": "app-monorepo/README-APP.md",
+        "hash": "16975260763811307946"
+      },
+      {
+        "file": "app-monorepo/README.md",
+        "hash": "1964099758941403665"
+      },
+      {
+        "file": "app-monorepo/error.log",
+        "hash": "17649540881856420767"
+      },
+      {
+        "file": "app-monorepo/eslint.config.mjs",
+        "hash": "10770449096712831357"
+      },
+      {
+        "file": "app-monorepo/jest.config.ts",
+        "hash": "6870352021923392442"
+      },
+      {
+        "file": "app-monorepo/jest.preset.js",
+        "hash": "9430166341120122740"
+      },
+      {
+        "file": "app-monorepo/nx.json",
+        "hash": "12047719487492097040"
+      },
+      {
+        "file": "app-monorepo/package-lock.json",
+        "hash": "2405716777591108588"
+      },
+      {
+        "file": "app-monorepo/package.json",
+        "hash": "6517824239482549637"
+      },
+      {
+        "file": "app-monorepo/tsconfig.base.json",
+        "hash": "9901813957347470122"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/000.md",
+        "hash": "6080010874495647560"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/001.md",
+        "hash": "4617197621897408186"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/002.md",
+        "hash": "15155794271016056543"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/003.md",
+        "hash": "8399943573210216436"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/004.md",
+        "hash": "12589095270653442591"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/005.md",
+        "hash": "12091712546708554892"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/006.md",
+        "hash": "15985392881529715163"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/007.md",
+        "hash": "10950791682790513553"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/008.md",
+        "hash": "11979140803691208976"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/009.md",
+        "hash": "5209075455589617820"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/010.md",
+        "hash": "14202092366947960661"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/011.md",
+        "hash": "7712817629031620156"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/012.md",
+        "hash": "16906828965592731251"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/TEMP.md",
+        "hash": "11110722076231884651"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/concentrate.md",
+        "hash": "11683385337346883661"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/feature-structure-argumentations.md",
+        "hash": "18436672873235358665"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/feature-structure.md",
+        "hash": "13736104666313321728"
+      },
+      {
+        "file": "other/books/feature-architecture-2026/nx.md",
+        "hash": "6541853261315523156"
+      },
+      {
+        "file": "other/notes.txt",
+        "hash": "18093724143285353135"
+      },
+      {
+        "file": "other/nx-workflow.md",
+        "hash": "16966947899979060070"
+      }
+    ]
+  },
+  "externalNodesHash": "3244421341483603138"
+}

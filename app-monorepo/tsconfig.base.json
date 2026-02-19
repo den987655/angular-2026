@@ -1,0 +1,33 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@app-monorepo/domain": ["libs/orders/domain/src/index.ts"],
+      "@app-monorepo/orders-data-access": [
+        "libs/orders/api/data-access/src/index.ts"
+      ],
+      "@app-monorepo/orders-web-data-access": [
+        "libs/orders/web/data-access/src/index.ts"
+      ],
+      "@app-monorepo/orders-ui": ["libs/orders/web/ui/src/index.ts"],
+      "@app-monorepo/orders-feature": ["libs/orders/web/feature/src/index.ts"],
+      "@app-monorepo/orders-shared-data-access": [
+        "libs/orders/shared/data-access/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
