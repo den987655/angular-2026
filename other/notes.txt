@@ -1,0 +1,61 @@
+ng version
+npm uninstall -g @angular/cli
+npm i -g @angular/cli@latest
+ng new angular-2026 --skip-git
+
+
+
+
+
+# Что уже показано
+- **Standalone-компонент**: без NgModule.
+- **Signals**: `signal`, `computed` в сервисе и компоненте.
+- **Новый control flow**: `@for`, `@if/@else`.
+- **inject()**: DI без конструктора.
+- **Service на сигналах**: универсальный [AppStateService](cci:2://file:///c:/Users/spiri/OneDrive/Documents/GitHub/angular-2026/src/app/core/app-state.service.ts:12:0-70:1).
+
+# Что еще стоит показать (новый Angular-стек)
+- **@defer с placeholder/loading/error**
+  - Ленивая отрисовка тяжелых блоков: `@defer (on idle | on viewport | on interaction(button)) { ... } @placeholder { ... } @loading { ... } @error { ... }`.
+  - Универсально и наглядно.
+
+- **Signal Inputs/Outputs для компонентов**
+  - `input()` и `output()` функции вместо декораторов, а также `model()` для 2-way биндинга.
+  - Пример: дочерний компонент `TogglePanel` с `open = input(false)`, `toggled = output<void>()`, `value = model<string>()`.
+
+- **@switch / @case / @default**
+  - Демонстрация ветвления по состоянию темы или статусам загрузки.
+
+- **@let**
+  - Ввод локальных переменных в шаблоне для улучшения читаемости: `@let t = appState.theme();`.
+
+- **effect()**
+  - Побочный эффект на сигналах: синхронизировать `theme()` с `document.documentElement.dataset.theme`.
+
+- **Router современный**
+  - Standalone-маршруты, `loadComponent` для ленивых компонентов.
+  - Функциональные guard/resolver: `canMatch`, `canActivate` через функции.
+  - Демо навигации + `@defer` внутри лениво загружаемого компонента.
+
+- **HttpClient c fetch и сигналами**
+  - `provideHttpClient(withFetch())`.
+  - Обертка запроса через `signal`+`computed`, либо `toSignal()` для стрима.
+
+- **Зонлес (без zone.js) — экспериментально**
+  - `provideExperimentalZonelessChangeDetection()` в `main.ts`.
+  - Хорошо показывает силу сигналов, но помечу как опционально/экспериментально.
+
+- **SSR/Гидрация (если релевантно проекту)**
+  - `provideClientHydration()` и проверка, что сигналы корректно обновляют гидрированный UI.
+
+# Микро-улучшения текущего примера
+- **Theme CSS hook**: вешать `data-theme` на `<html>` через `effect()`, чтобы реально переключалась тема.
+- **Notices TTL**: авто-очистка уведомлений через таймер в сервисе.
+- **@else if**: добавить промежуточное состояние, например счетчик кликов.
+
+# Что из этого реализовать прямо сейчас?
+- **Вариант A (быстрый)**: добавить `@defer` блок + `@placeholder/@loading/@error`.
+- **Вариант B (наглядный)**: создать дочерний компонент с `input()/output()/model()` и использовать в [app.html](cci:7://file:///c:/Users/spiri/OneDrive/Documents/GitHub/angular-2026/src/app/app.html:0:0-0:0).
+- **Вариант C (полезный)**: `effect()` для синхронизации темы с `document` и простые стили `data-theme`.
+
+Скажи, какой вариант выбрать (A/B/C), или дай приоритетный порядок — я сразу внесу изменения.

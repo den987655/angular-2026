@@ -1,0 +1,9 @@
+{
+  "name": "orders-data-access",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/orders/api/data-access/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project orders-data-access --web",
+  "targets": {}
+}

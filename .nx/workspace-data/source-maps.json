@@ -1,0 +1,854 @@
+{
+  "app-monorepo/libs/orders/domain": {
+    "root": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "tags.npm:private": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.targetGroups": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageName": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageVersion": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.packageMain": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "metadata.js.isInPackageManagerWorkspaces": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/domain/package.json",
+      "nx/core/package-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "app-monorepo/libs/orders/domain/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/apps/api": {
+    "root": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.command": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.args": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.cwd": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.args": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.dependsOn": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.cache": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.outputs": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.options": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune-lockfile.options.buildTarget": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.dependsOn": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.cache": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.outputs": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.options": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.copy-workspace-modules.options.buildTarget": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune.dependsOn": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.prune.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.continuous": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.dependsOn": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.buildTarget": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.runBuildTargetDependencies": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.passWithNoTests": [
+      "app-monorepo/apps/api/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/apps/api-e2e": {
+    "root": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies.api": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.executor": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.outputs": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.options": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.dependsOn": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.options.jestConfig": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.e2e.options.passWithNoTests": [
+      "app-monorepo/apps/api-e2e/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/apps/web": {
+    "root": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.outputs": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.defaultConfiguration": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.outputPath": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.browser": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.polyfills": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.tsConfig": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.inlineStyleLanguage": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.assets": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.styles": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.budgets": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.production.outputHashing": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.optimization": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.extractLicenses": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.configurations.development.sourceMap": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.continuous": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.defaultConfiguration": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.production.buildTarget": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.configurations.development.buildTarget": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.extract-i18n.options.buildTarget": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.outputs": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.jestConfig": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.options.tsConfig": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.continuous": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.executor": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.buildTarget": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.port": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.staticFilePath": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve-static.options.spa": [
+      "app-monorepo/apps/web/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/apps/web-e2e": {
+    "root": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "implicitDependencies.web": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/apps/web-e2e/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/libs/orders/api/data-access": {
+    "root": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "// targets": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/api/data-access/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/libs/orders/shared/data-access": {
+    "root": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.scope:shared": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags.type:data-access": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "app-monorepo/libs/orders/shared/data-access/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/libs/orders/web/data-access": {
+    "root": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "app-monorepo/libs/orders/web/data-access/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/libs/orders/web/feature": {
+    "root": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "app-monorepo/libs/orders/web/feature/project.json",
+      "nx/core/project-json"
+    ]
+  },
+  "app-monorepo/libs/orders/web/ui": {
+    "root": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "prefix": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "app-monorepo/libs/orders/web/ui/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}
