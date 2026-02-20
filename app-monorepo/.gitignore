@@ -44,3 +44,9 @@ Thumbs.db
 .github/instructions/nx.instructions.md
 
 .angular
+
+# env files
+.env
+.env.*
+!.env.example
+apps/api/.env
