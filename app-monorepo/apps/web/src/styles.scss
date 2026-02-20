@@ -1,1 +1,528 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand: #5a6bff;
+  --brand-dark: #4b5cf2;
+  --brand-light: #7b88ff;
+  --surface: #f5f6fb;
+  --text-dark: #1f2937;
+  --muted: #6b7280;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #ffffff;
+  background: var(--brand);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--brand) 0%, var(--brand) 62%, var(--surface) 62%);
+}
+
+.header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.nav a {
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #ffffff;
+  transition: width 0.2s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.btn {
+  border-radius: 999px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, opacity 0.2s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+/* Hero: белый фон, тёмный текст */
+.btn--primary {
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn--primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero: прозрачный с белой обводкой */
+.btn--ghost {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  box-shadow: none !important;
+}
+
+.btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  transform: translateY(-1px);
+}
+
+/* Шапка: войти */
+.btn--login {
+  justify-self: end;
+  background: #ffffff !important;
+  color: #1f2937 !important;
+  padding: 12px 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn--login:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Тарифы: сплошной синий, белый текст */
+.btn--solid {
+  background: var(--brand) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(90, 107, 255, 0.35);
+}
+
+.btn--solid:hover {
+  background: var(--brand-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(90, 107, 255, 0.4);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 24px 80px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 32px;
+  align-items: center;
+  padding: 36px 32px 44px;
+  border-radius: 24px;
+  background: linear-gradient(130deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  position: relative;
+  overflow: hidden;
+  animation: fade-up 0.6s ease both;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: -80px auto auto -120px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  filter: blur(20px);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__eyebrow {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  opacity: 0.7;
+  margin: 0 0 14px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+
+.hero__lead {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 520px;
+  margin: 0 0 24px;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero__art {
+  position: relative;
+  min-height: 220px;
+  display: grid;
+  place-items: center;
+}
+
+.plane {
+  width: clamp(180px, 28vw, 240px);
+  height: clamp(140px, 22vw, 180px);
+  display: grid;
+  place-items: center;
+  transform: rotate(-12deg);
+}
+
+.plane svg {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 20px 30px rgba(30, 41, 130, 0.35));
+}
+
+.plane__trail {
+  position: absolute;
+  width: 160px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.35);
+  right: 30%;
+  top: 30%;
+  transform: rotate(-20deg);
+}
+
+.plane__trail--alt {
+  width: 110px;
+  top: 65%;
+  right: 40%;
+  opacity: 0.6;
+}
+
+.section {
+  margin-top: 60px;
+  padding: 36px 32px 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  color: var(--text-dark);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.08);
+  animation: fade-up 0.7s ease both;
+}
+
+.section h2 {
+  margin: 0 0 24px;
+  font-size: 22px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: rgba(90, 107, 255, 0.15);
+  font-size: 20px;
+}
+
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.section--features {
+  background: linear-gradient(180deg, #ffffff 0%, #f2f4ff 100%);
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.feature-card {
+  padding: 24px;
+  border-radius: 18px;
+  background: #ffffff;
+  border: 1px solid rgba(99, 102, 241, 0.12);
+  box-shadow: 0 20px 45px rgba(88, 102, 241, 0.12);
+}
+
+.feature-card__badge {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(90, 107, 255, 0.15);
+  color: var(--brand-dark);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 14px;
+}
+
+.feature-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.feature-card p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.benefit-card {
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid rgba(99, 102, 241, 0.12);
+}
+
+.benefit-card h3 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.benefit-card p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.section--pricing {
+  background: #ffffff;
+}
+
+.pricing__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.pricing__head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.pricing-card {
+  padding: 22px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.18);
+  background: #ffffff;
+  display: grid;
+  gap: 12px;
+  box-shadow: 0 18px 40px rgba(45, 63, 175, 0.1);
+}
+
+.pricing-card--accent {
+  background: linear-gradient(180deg, rgba(90, 107, 255, 0.1) 0%, #ffffff 70%);
+  border-color: rgba(90, 107, 255, 0.35);
+}
+
+.pricing-card__tag {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-dark);
+  font-weight: 700;
+}
+
+.pricing-card__price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.pricing-card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer {
+  margin-top: 70px;
+  padding: 40px 24px 48px;
+  background: #ffffff;
+  color: var(--text-dark);
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 24px;
+}
+
+.footer__main p {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 320px;
+}
+
+.footer h4 {
+  margin: 0 0 10px;
+  font-size: 14px;
+}
+
+.footer a {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 980px) {
+  .header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid,
+  .benefits,
+  .pricing {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .pricing__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .header {
+    padding: 20px 16px;
+  }
+
+  main {
+    padding: 10px 16px 60px;
+  }
+
+  .hero {
+    padding: 28px 22px 32px;
+  }
+
+  .section {
+    padding: 28px 22px;
+  }
+
+  .feature-grid,
+  .benefits,
+  .pricing {
+    grid-template-columns: 1fr;
+  }
+}

@@ -19,9 +19,17 @@
           {
             "glob": "**/*",
             "input": "apps/web/public"
+          },
+          {
+            "glob": "**/*",
+            "input": "node_modules/@taiga-ui/icons/src",
+            "output": "assets/taiga-ui/icons"
           }
         ],
-        "styles": ["apps/web/src/styles.scss"]
+        "styles": [
+          "@taiga-ui/core/styles/taiga-ui-local.scss",
+          "apps/web/src/styles.scss"
+        ]
       },
       "configurations": {
         "production": {
@@ -50,6 +58,9 @@
     "serve": {
       "continuous": true,
       "executor": "@angular/build:dev-server",
+      "options": {
+        "proxyConfig": "apps/web/proxy.conf.json"
+      },
       "configurations": {
         "production": {
           "buildTarget": "web:build:production"
