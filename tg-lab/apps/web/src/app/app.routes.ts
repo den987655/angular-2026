@@ -14,7 +14,7 @@ export const appRoutes: Route[] = [
       { path: '', loadComponent: () => import('./pages/dashboard/dashboard.component').then((m) => m.DashboardComponent) },
       { path: 'invites', loadComponent: () => import('./pages/stub/stub.component').then((m) => m.StubComponent) },
       { path: 'audience', loadComponent: () => import('./pages/stub/stub.component').then((m) => m.StubComponent) },
-      { path: 'accounts', loadComponent: () => import('./pages/stub/stub.component').then((m) => m.StubComponent) },
+      { path: 'accounts', loadComponent: () => import('./pages/accounts/accounts.component').then((m) => m.AccountsComponent) },
       { path: 'tasks', loadComponent: () => import('./pages/stub/stub.component').then((m) => m.StubComponent) },
       { path: 'proxy', loadComponent: () => import('./pages/stub/stub.component').then((m) => m.StubComponent) },
       { path: 'profile', loadComponent: () => import('./pages/profile/profile.component').then((m) => m.ProfileComponent) },
