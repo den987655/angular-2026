@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { AuthPersistenceModule } from './auth-persistence/auth-persistence.module';
 import { ProfileModule } from './profile/profile.module';
 import { TariffsController } from './tariffs.controller';
 import { TelegramAccountsModule } from './telegram-accounts/telegram-accounts.module';
@@ -21,8 +22,11 @@ import { TelegramAccountsModule } from './telegram-accounts/telegram-accounts.mo
       password: process.env.DB_PASS || 'postgres',
       database: process.env.DB_NAME || 'tglab',
       autoLoadEntities: true,
-      synchronize: process.env.NODE_ENV !== 'production',
+      // Never use synchronize in production: it can drop/change tables unexpectedly.
+      // Use migrations for controlled, reviewable schema changes instead.
+      synchronize: false,
     }),
+    AuthPersistenceModule,
     AuthModule,
     ProfileModule,
     TelegramAccountsModule,

@@ -39,3 +39,24 @@ npm install
 - `JWT_SECRET` — секрет для JWT (по умолчанию demo-секрет)
 - `FRONTEND_URL` — URL фронта для ссылок в письмах (по умолчанию http://localhost:4200)
 - `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS`, `SMTP_PORT`, `SMTP_FROM` — настройки почты
+
+## Миграции TypeORM (PostgreSQL)
+
+В продакшене `synchronize` отключен, потому что он может неожиданно изменить/удалить таблицы.
+Для надёжных и повторяемых изменений схемы используются миграции.
+
+Команды (в корне `tg-lab`):
+
+```bash
+# генерация миграции (обязательно указать путь)
+npm run migration:generate -- apps/api/src/migrations/InitSchema
+
+# применить все миграции
+npm run migration:run
+
+# откатить последнюю миграцию
+npm run migration:revert
+```
+
+Важно: CLI берёт настройки БД из переменных окружения (`DB_HOST`, `DB_PORT`, `DB_USER`, `DB_PASS`, `DB_NAME`).
+Если они не подхватываются автоматически, экспортируйте их перед запуском команд.

@@ -5,7 +5,6 @@ import {
   Get,
   Post,
   Query,
-  UnauthorizedException,
 } from '@nestjs/common';
 import { AuthService } from './auth.service';
 
@@ -35,9 +34,30 @@ export class AuthController {
   @Post('login')
   async login(
     @Body() body: { email?: string; password?: string }
-  ): Promise<{ token: string; user: { id: number; email: string } }> {
+  ): Promise<{
+    accessToken: string;
+    refreshToken: string;
+    token: string;
+    user: { id: number; email: string };
+  }> {
     const email = body.email ?? '';
     const password = body.password ?? '';
     return this.authService.login(email, password);
+  }
+
+  @Post('refresh')
+  async refresh(
+    @Body() body: { refreshToken?: string }
+  ): Promise<{ accessToken: string; refreshToken: string }> {
+    const refreshToken = body.refreshToken ?? '';
+    return this.authService.refresh(refreshToken);
+  }
+
+  @Post('logout')
+  async logout(
+    @Body() body: { refreshToken?: string }
+  ): Promise<{ message: string }> {
+    const refreshToken = body.refreshToken ?? '';
+    return this.authService.logout(refreshToken);
   }
 }
