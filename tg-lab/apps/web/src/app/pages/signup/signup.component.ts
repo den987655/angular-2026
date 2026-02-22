@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   FormBuilder,
@@ -90,12 +90,12 @@ function passwordMatchValidator(): ValidatorFn {
             @if (form.hasError('passwordMismatch') && form.get('passwordRepeat')?.touched) {
               <p class="auth-error">Пароли не совпадают</p>
             }
-            @if (error) {
-              <p class="auth-error">{{ error }}</p>
+            @if (error()) {
+              <p class="auth-error">{{ error() }}</p>
             }
 
-            <button type="submit" [disabled]="form.invalid || loading" class="auth-btn auth-btn--primary">
-              {{ loading ? 'Регистрация...' : 'Зарегистрироваться' }}
+            <button type="submit" [disabled]="form.invalid || loading()" class="auth-btn auth-btn--primary">
+              {{ loading() ? 'Регистрация...' : 'Зарегистрироваться' }}
             </button>
 
             <div class="auth-divider">ИЛИ</div>
@@ -285,24 +285,24 @@ export class SignUpComponent {
     { validators: passwordMatchValidator() }
   );
 
-  error = '';
+  error = signal('');
   successMessage = '';
-  loading = false;
+  loading = signal(false);
 
   onSubmit(): void {
-    if (this.form.invalid || this.loading) return;
+    if (this.form.invalid || this.loading()) return;
     const { email, password } = this.form.getRawValue();
-    this.error = '';
-    this.loading = true;
+    this.error.set('');
+    this.loading.set(true);
 
     this.auth.signup(email, password).subscribe({
       next: (res) => {
-        this.loading = false;
+        this.loading.set(false);
         this.successMessage = res.message;
       },
       error: (err) => {
-        this.loading = false;
-        this.error = err?.error?.message ?? err?.message ?? 'Ошибка регистрации';
+        this.loading.set(false);
+        this.error.set(err?.error?.message ?? err?.message ?? 'Ошибка регистрации');
       },
     });
   }

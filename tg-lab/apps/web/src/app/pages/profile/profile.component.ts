@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -43,8 +43,8 @@ import { AuthService } from '../../core/api/auth.service';
               <span class="field-icon">🔒</span>
               <input type="password" formControlName="confirmPassword" placeholder="Подтвердите новый пароль" />
             </div>
-            @if (passwordError) {
-              <p class="error">{{ passwordError }}</p>
+            @if (passwordError()) {
+              <p class="error">{{ passwordError() }}</p>
             }
             @if (passwordSuccess) {
               <p class="success">{{ passwordSuccess }}</p>
@@ -149,16 +149,16 @@ export class ProfileComponent {
       confirmPassword: ['', Validators.required],
     }
   );
-  passwordError = '';
+  passwordError = signal('');
   passwordSuccess = '';
   saving = false;
 
   onSubmit(): void {
     const { oldPassword, newPassword, confirmPassword } = this.passwordForm.getRawValue();
-    this.passwordError = '';
+    this.passwordError.set('');
     this.passwordSuccess = '';
     if (newPassword !== confirmPassword) {
-      this.passwordError = 'Пароли не совпадают';
+      this.passwordError.set('Пароли не совпадают');
       return;
     }
     this.saving = true;
@@ -169,7 +169,7 @@ export class ProfileComponent {
         this.saving = false;
       },
       error: (err) => {
-        this.passwordError = err?.error?.message ?? 'Ошибка смены пароля';
+        this.passwordError.set(err?.error?.message ?? 'Ошибка смены пароля');
         this.saving = false;
       },
     });

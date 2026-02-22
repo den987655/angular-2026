@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
@@ -60,12 +60,12 @@ import { AuthService } from '../../core/api/auth.service';
 
             <span class="forgot-link">Забыли пароль?</span>
 
-            @if (error) {
-              <p class="auth-error">{{ error }}</p>
+            @if (error()) {
+              <p class="auth-error">{{ error() }}</p>
             }
 
-            <button type="submit" [disabled]="form.invalid || loading" class="auth-btn auth-btn--primary">
-              {{ loading ? 'Вход...' : 'Войти' }}
+            <button type="submit" [disabled]="form.invalid || loading()" class="auth-btn auth-btn--primary">
+              {{ loading() ? 'Вход...' : 'Войти' }}
             </button>
 
             <div class="auth-divider">ИЛИ</div>
@@ -251,23 +251,23 @@ export class SignInComponent {
     password: ['', [Validators.required, Validators.minLength(4)]],
   });
 
-  error = '';
-  loading = false;
+  error = signal('');
+  loading = signal(false);
 
   onSubmit(): void {
-    if (this.form.invalid || this.loading) return;
+    if (this.form.invalid || this.loading()) return;
     const { email, password } = this.form.getRawValue();
-    this.error = '';
-    this.loading = true;
+    this.error.set('');
+    this.loading.set(true);
 
     this.auth.login(email, password).subscribe({
       next: () => {
-        this.loading = false;
+        this.loading.set(false);
         this.router.navigate(['/dashboard']);
       },
       error: (err) => {
-        this.loading = false;
-        this.error = err?.error?.message ?? err?.message ?? 'Ошибка входа';
+        this.loading.set(false);
+        this.error.set(err?.error?.message ?? err?.message ?? 'Ошибка входа');
       },
     });
   }

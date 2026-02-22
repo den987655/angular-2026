@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnInit, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import {
   TelegramAccount,
@@ -36,7 +36,7 @@ import {
           <button type="button" class="ghost-btn" (click)="loadAccounts()">Обновить</button>
         </div>
         <p class="status-line" *ngIf="message">{{ message }}</p>
-        <p class="status-line error" *ngIf="error">{{ error }}</p>
+        <p class="status-line error" *ngIf="error()">{{ error() }}</p>
         <div class="table-wrap">
           <table>
             <thead>
@@ -136,22 +136,22 @@ import {
           <h4>Telegram Verify</h4>
           <form [formGroup]="verifyForm" class="verify-grid">
             <input formControlName="phone" placeholder="+79990000000" />
-            <button type="button" class="ghost-btn" [disabled]="verifyForm.controls.phone.invalid || loading" (click)="requestCode()">
+            <button type="button" class="ghost-btn" [disabled]="verifyForm.controls.phone.invalid || loading()" (click)="requestCode()">
               Request code
             </button>
             <input formControlName="code" placeholder="12345" />
-            <button type="button" class="ghost-btn" [disabled]="verifyForm.invalid || loading" (click)="verifyCode()">
+            <button type="button" class="ghost-btn" [disabled]="verifyForm.invalid || loading()" (click)="verifyCode()">
               Verify
             </button>
           </form>
         </div>
 
         <p class="status-line" *ngIf="message">{{ message }}</p>
-        <p class="status-line error" *ngIf="error">{{ error }}</p>
+        <p class="status-line error" *ngIf="error()">{{ error() }}</p>
 
         <footer class="modal-foot">
           <button type="button" class="plain-btn" (click)="closeModal()">Отменить</button>
-          <button type="button" class="primary-btn" [disabled]="createForm.invalid || loading" (click)="submitModal()">
+          <button type="button" class="primary-btn" [disabled]="createForm.invalid || loading()" (click)="submitModal()">
             Загрузить аккаунты
           </button>
         </footer>
@@ -468,10 +468,10 @@ export class AccountsComponent implements OnInit {
 
   accounts: TelegramAccount[] = [];
   selectedArchives: File[] = [];
-  loading = false;
+  loading = signal(false);
   modalOpen = false;
   message = '';
-  error = '';
+  error = signal('');
   editState: Record<string, Partial<TelegramAccount>> = {};
 
   setupForm = this.fb.nonNullable.group({
@@ -500,13 +500,13 @@ export class AccountsComponent implements OnInit {
 
   uploadAccounts(): void {
     this.message = `Выбрано архивов: ${this.selectedArchives.length}. Импорт подключается через API.`;
-    this.error = '';
+    this.error.set('');
   }
 
   openModal(): void {
     this.modalOpen = true;
     this.message = '';
-    this.error = '';
+    this.error.set('');
   }
 
   closeModal(): void {
@@ -514,25 +514,25 @@ export class AccountsComponent implements OnInit {
   }
 
   loadAccounts(): void {
-    this.loading = true;
+    this.loading.set(true);
     this.telegramAccountsApi.list().subscribe({
       next: (res) => {
         this.accounts = res;
-        this.loading = false;
-        this.error = '';
+        this.loading.set(false);
+        this.error.set('');
       },
       error: (err) => {
-        this.error = err?.error?.message ?? 'Не удалось загрузить аккаунты';
-        this.loading = false;
+        this.error.set(err?.error?.message ?? 'Не удалось загрузить аккаунты');
+        this.loading.set(false);
       },
     });
   }
 
   createAccount(): void {
     if (this.createForm.invalid) return;
-    this.loading = true;
+    this.loading.set(true);
     this.message = '';
-    this.error = '';
+    this.error.set('');
     this.telegramAccountsApi.create(this.createForm.getRawValue()).subscribe({
       next: () => {
         this.createForm.patchValue({ phone: '', status: 'pending' });
@@ -540,8 +540,8 @@ export class AccountsComponent implements OnInit {
         this.loadAccounts();
       },
       error: (err) => {
-        this.error = err?.error?.message ?? 'Не удалось добавить аккаунт';
-        this.loading = false;
+        this.error.set(err?.error?.message ?? 'Не удалось добавить аккаунт');
+        this.loading.set(false);
       },
     });
   }
@@ -549,7 +549,7 @@ export class AccountsComponent implements OnInit {
   submitModal(): void {
     this.createAccount();
     this.uploadAccounts();
-    if (!this.error) {
+    if (!this.error()) {
       this.closeModal();
     }
   }
@@ -561,9 +561,9 @@ export class AccountsComponent implements OnInit {
   save(id: string): void {
     const patch = this.editState[id];
     if (!patch) return;
-    this.loading = true;
+    this.loading.set(true);
     this.message = '';
-    this.error = '';
+    this.error.set('');
     this.telegramAccountsApi.update(id, patch).subscribe({
       next: () => {
         delete this.editState[id];
@@ -571,24 +571,24 @@ export class AccountsComponent implements OnInit {
         this.loadAccounts();
       },
       error: (err) => {
-        this.error = err?.error?.message ?? 'Не удалось обновить аккаунт';
-        this.loading = false;
+        this.error.set(err?.error?.message ?? 'Не удалось обновить аккаунт');
+        this.loading.set(false);
       },
     });
   }
 
   remove(id: string): void {
-    this.loading = true;
+    this.loading.set(true);
     this.message = '';
-    this.error = '';
+    this.error.set('');
     this.telegramAccountsApi.remove(id).subscribe({
       next: () => {
         this.message = 'Аккаунт удален';
         this.loadAccounts();
       },
       error: (err) => {
-        this.error = err?.error?.message ?? 'Не удалось удалить аккаунт';
-        this.loading = false;
+        this.error.set(err?.error?.message ?? 'Не удалось удалить аккаунт');
+        this.loading.set(false);
       },
     });
   }
@@ -596,36 +596,36 @@ export class AccountsComponent implements OnInit {
   requestCode(): void {
     const phone = this.verifyForm.controls.phone.value;
     if (!phone) return;
-    this.loading = true;
+    this.loading.set(true);
     this.message = '';
-    this.error = '';
+    this.error.set('');
     this.telegramAccountsApi.requestCode(phone).subscribe({
       next: (res) => {
-        this.loading = false;
+        this.loading.set(false);
         this.message = res.message;
       },
       error: (err) => {
-        this.loading = false;
-        this.error = err?.error?.message ?? 'Не удалось отправить код';
+        this.loading.set(false);
+        this.error.set(err?.error?.message ?? 'Не удалось отправить код');
       },
     });
   }
 
   verifyCode(): void {
     const { phone, code } = this.verifyForm.getRawValue();
-    this.loading = true;
+    this.loading.set(true);
     this.message = '';
-    this.error = '';
+    this.error.set('');
     this.telegramAccountsApi.verifyCode(phone, code).subscribe({
       next: (res) => {
-        this.loading = false;
+        this.loading.set(false);
         this.message = res.message;
         this.verifyForm.patchValue({ code: '' });
         this.loadAccounts();
       },
       error: (err) => {
-        this.loading = false;
-        this.error = err?.error?.message ?? 'Не удалось подтвердить код';
+        this.loading.set(false);
+        this.error.set(err?.error?.message ?? 'Не удалось подтвердить код');
       },
     });
   }
